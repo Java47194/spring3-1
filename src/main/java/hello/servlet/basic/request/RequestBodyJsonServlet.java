@@ -19,9 +19,10 @@ public class RequestBodyJsonServlet extends HttpServlet {
     private ObjectMapper objectMapper=new ObjectMapper();
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // json 형식 파싱 시작
         ServletInputStream inputStream = request.getInputStream();
         String messageBody = StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);
-
+        // json 형식 파싱 끝
         System.out.println("messageBody = " + messageBody);
 
         HelloData helloData = objectMapper.readValue(messageBody, HelloData.class);
