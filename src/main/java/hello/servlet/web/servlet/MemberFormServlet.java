@@ -19,7 +19,7 @@ public class MemberFormServlet extends HttpServlet {
 
 
         response.setCharacterEncoding("utf-8");
-        response.setContentType("text/html");
+        response.setContentType("text/text");
 
         PrintWriter w = response.getWriter();
         w.write("<!DOCTYPE html>\n" +
