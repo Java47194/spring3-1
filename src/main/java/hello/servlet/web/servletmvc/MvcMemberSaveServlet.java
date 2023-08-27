@@ -21,7 +21,7 @@ public class MvcMemberSaveServlet extends HttpServlet {
         int age = Integer.parseInt(request.getParameter("age"));
 
         Member member=new Member(username,age);
-        System.out.println(member);
+
         memberRepository.save(member);
 
         //model에 데이터를 보관한다
