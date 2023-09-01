@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-public class MemberListV1 implements ControllerV1 {
+public class MemberListControllerV1 implements ControllerV1 {
     private MemberRepository memberRepository= MemberRepository.getInstance();
     @Override
     public void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
