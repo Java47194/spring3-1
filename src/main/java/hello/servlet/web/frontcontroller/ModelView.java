@@ -12,5 +12,7 @@ public class ModelView {
 
     public ModelView(String viewName) {
         this.viewName = viewName;
+        System.out.println("viewName + " + viewName);
     }
+
 }

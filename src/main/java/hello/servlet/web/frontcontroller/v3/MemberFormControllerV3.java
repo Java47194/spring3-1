@@ -1,13 +1,13 @@
-package hello.servlet.web.frontcontroller.v3.v3;
+package hello.servlet.web.frontcontroller.v3;
 
 import hello.servlet.web.frontcontroller.ModelView;
-import hello.servlet.web.frontcontroller.v3.ControllerV3;
 
 import java.util.Map;
 
-public class MemberFormControllerV3 implements ControllerV3 {
+public class MemberFormControllerV3 implements ControllerV3{
     @Override
     public ModelView process(Map<String, String> paramMap) {
+        System.out.println("MemberFormControllerV3 -- paramMap = " + paramMap);
         return new ModelView("new-form");
     }
 }
