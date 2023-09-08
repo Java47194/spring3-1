@@ -26,7 +26,7 @@ public class FrontControllerServletV3 extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String requestURI = request.getRequestURI();
         ControllerV3 controller = controllerV3Map.get(requestURI);// "/front-controller/v3/members/new-form" 키 가 들어오면 값은 new MemberFromControllerV3
-
+        System.out.println("controller = " + controller);
         if(controller==null){
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return;
