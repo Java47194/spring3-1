@@ -67,12 +67,10 @@ public class FrontControllerServletV5 extends HttpServlet {
     }
 
     private MyHandlerAdapter getHandlerAdapter(Object handler) {
-
         for (MyHandlerAdapter adapter : handlerAdapters) {
             if(adapter.supports(handler)){
                 return adapter;
             }
-
         }
         throw new IllegalArgumentException("handler adapter를 찾을수 없습니다 = "+handler);
     }
